@@ -24,10 +24,10 @@ Affiche les champs essentiels du BPB avec leur offset hexadécimal :
 
 ### Hex View — Dump hexadécimal
 Affiche le secteur 0 octet par octet, coloré par zone :
-- 🔵 Bleu : instruction JMP (octets 0-2)
-- 🟢 Vert : BPB (octets 3-89)
-- ⬜ Blanc : code du bootloader
-- 🔴 Rouge : signature 55AA (octets 510-511)
+- Bleu : instruction JMP (octets 0-2)
+- Vert : BPB (octets 3-89)
+- Blanc : code du bootloader
+- Rouge : signature 55AA (octets 510-511)
 
 ### FAT Clusters — Table d'allocation
 Liste tous les clusters de la FAT32 avec leur état :
