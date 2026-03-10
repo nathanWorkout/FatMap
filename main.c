@@ -529,7 +529,16 @@ void compute_layout(int rows, int cols, int *top_h, int *bot_h, int *left_w, int
 
 int main(int argc, char *argv[]) {
     char filename[512];
-    strncpy(filename, argc>1?argv[1]:"boot.img", sizeof(filename)-1);
+
+    if (argc < 2) {
+        fprintf(stderr, "Usage : fatmap <image.img>\n");
+        fprintf(stderr, "Exemple : fatmap boot.img\n\n");
+        fprintf(stderr, "Une fois dans fatmap, pour ouvrir un fichier :\n");
+        fprintf(stderr, "  :open <chemin>    ex: :open /home/user/boot.img\n");
+        return 1;
+    }
+
+    strncpy(filename, argv[1], sizeof(filename)-1);
     FILE *f=fopen(filename,"rb");
     if(!f){fprintf(stderr,"Erreur: impossible d'ouvrir %s\n",filename);return 1;}
     BPB bpb; fread(&bpb,sizeof(BPB),1,f); fclose(f);
