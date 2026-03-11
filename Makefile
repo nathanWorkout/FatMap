@@ -6,6 +6,7 @@ fatmap: main.c
 	$(CC) $(CFLAGS) -o fatmap main.c $(LIBS)
 
 install:
+	mkdir -p $(DESTDIR)/usr/bin
 	install -m 755 fatmap $(DESTDIR)/usr/bin/fatmap
 
 clean:
