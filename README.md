@@ -6,7 +6,7 @@ Outil TUI pour inspecter les images disque FAT32 directement dans le terminal.
 
 fatmap affiche en temps réel la structure interne d'une image FAT32 :
 BPB, dump hexadécimal, table d'allocation FAT, chaîne de clusters du kernel,
-carte complète du disque — le tout dans une interface TUI colorée et navigable.
+carte complète du disque - le tout dans une interface TUI colorée et navigable.
 
 ## Interface
 
